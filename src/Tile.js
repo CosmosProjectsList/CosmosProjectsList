@@ -58,6 +58,8 @@ class Tile extends Component {
           {this.state.file.medium && <a href={this.state.file.medium} target="_blank" rel="noopener noreferrer"><i className="fa fa-medium social-glyph medium-colour"></i></a>}
           {this.state.file.twitter && <a href={this.state.file.twitter} target="_blank" rel="noopener noreferrer"><i className="fa fa-twitter social-glyph twitter-colour"></i></a>}
           {this.state.file.telegram && <a href={this.state.file.telegram} target="_blank" rel="noopener noreferrer"><i className="fa fa-telegram social-glyph telegram-colour"></i></a>}
+          {this.state.file.slack && <a href={this.state.file.slack} target="_blank" rel="noopener noreferrer"><i className="fa fa-slack social-glyph slack-colour"></i></a>}
+          {this.state.file.linkedin && <a href={this.state.file.linkedin} target="_blank" rel="noopener noreferrer"><i className="fa fa-linkedin social-glyph linkedin-colour"></i></a>}
           {this.state.file.reddit && <a href={this.state.file.reddit} target="_blank" rel="noopener noreferrer"><i className="fa fa-reddit social-glyph reddit-colour"></i></a>}
           {this.state.file.github && <a href={this.state.file.github} target="_blank" rel="noopener noreferrer"><i className="fa fa-github social-glyph github-colour"></i></a>}
           {this.state.file.bitbucket && <a href={this.state.file.bitbucket} target="_blank" rel="noopener noreferrer"><i className="fa fa-bitbucket social-glyph bitbucket-colour"></i></a>}
@@ -67,19 +69,20 @@ class Tile extends Component {
           {this.state.file.lightpaper && <a href={this.state.file.lightpaper} target="_blank" rel="noopener noreferrer"><i className="fa fa-file-o social-glyph lightpaper-colour"></i></a>}
           {this.state.file.yellowpaper && <a href={this.state.file.yellowpaper} target="_blank" rel="noopener noreferrer"><i className="fa fa-file-o social-glyph yellowpaper-colour"></i></a>}
           {this.state.file.fundingpaper && <a href={this.state.file.fundingpaper} target="_blank" rel="noopener noreferrer"><i className="fa fa-file-o social-glyph fundingpaper-colour"></i></a>}
+          {this.state.file.email && <a href={this.state.file.email} target="_blank" rel="noopener noreferrer"><i className="fa fa-email social-glyph"></i></a>}
         </div>
         <div className="col-lg-2 text-center">
           <p>
-            <button className="btn btn-primary" type="button" data-toggle="collapse" data-target={`#collapseInfo${id}`} aria-expanded="false" aria-controls={`collapseInfo${id}`}>
+            {this.state.file.description_long && <button className="btn btn-primary" type="button" data-toggle="collapse" data-target={`#collapseInfo${id}`} aria-expanded="false" aria-controls={`collapseInfo${id}`}>
               Details
-            </button>
+            </button>}
           </p>
         </div>
         <div className="col-lg-2 text-center">
           <p>
-            <button className="btn btn-primary" type="button" data-toggle="collapse" data-target={`#collapseProof${id}`} aria-expanded="false" aria-controls={`collapseProof${id}`}>
+            {this.state.file.proof && <button className="btn btn-primary" type="button" data-toggle="collapse" data-target={`#collapseProof${id}`} aria-expanded="false" aria-controls={`collapseProof${id}`}>
               Proof
-            </button>
+            </button>}
           </p>
         </div>
       </div>
