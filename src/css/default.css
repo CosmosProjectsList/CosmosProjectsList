@@ -1,0 +1,61 @@
+.text-center {
+    text-align: center;
+  }
+
+  .social-glyph {
+    font-size: 27px;
+    margin-right: 8px;
+    margin-left: 8px;
+  }
+
+  .twitter-colour {
+    color: #38A1F3;
+  }
+
+  .reddit-colour {
+    color: #ff4301;
+  }
+  
+  .telegram-colour {
+    color: #0088cc;
+  }
+
+  .discord-colour {
+    color: #7289da;
+  }
+
+  .medium-colour {
+    color: #00ab6c;
+  }
+
+  .github-colour {
+    color: #333;
+  }
+
+  .bitbucket-colour {
+    color: #205081;
+  }
+  
+  .facebook-colour{
+      color: #3b5998;
+  }
+
+  .whitepaper-colour{
+    color: #000000;
+}
+
+.lightpaper-colour{
+    color: #424344;
+}
+
+.yellowpaper-colour{
+    color: #939600;
+}
+
+.pinkpaper-colour{
+    color: #8d007a;
+}
+
+.fundingpaper-colour{
+    color: #00520b;
+}
