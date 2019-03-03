@@ -34,7 +34,7 @@ const fileListRefresh = () => {
         }
 
         if(oldFile.sha != newList[oldFile.name].sha) {
-          confirmedFiles[newFile.name] = newFile
+          confirmedFiles[newFile.name] = newList[oldFile.name]
           confirmedFiles[oldFile.name].update = true;
           console.log(`File ${oldFile.name} was updated (${newList[oldFile.name].sha})`);
         }
