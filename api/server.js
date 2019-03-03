@@ -27,25 +27,28 @@ const fileListRefresh = () => {
       var newKeys = Object.keys(newList);
 
       for(var i = 0; i < oldKeys.length; i++){
-        oldFile = confirmedFiles[oldKeys[i]]
-        if(!newList[oldFile.name]) { //delete keys not present in the old list
-          delete confirmedFiles[oldFile.name]
+        var name = oldKeys[i];
+        var oldFile = confirmedFiles[name];
+        var newFile = newList[name];
+        if(!newFile) { //delete keys not present in the old list
+          delete confirmedFiles[name]
           continue;
         }
 
-        if(oldFile.sha != newList[oldFile.name].sha) {
-          confirmedFiles[newFile.name] = newList[oldFile.name]
-          confirmedFiles[oldFile.name].update = true;
-          console.log(`File ${oldFile.name} was updated (${newList[oldFile.name].sha})`);
+        if(oldFile.sha != newFile.sha) {
+          confirmedFiles[name] = newFile;
+          confirmedFiles[name].update = true;
+          console.log(`File ${name} was updated (${newFile.sha})`);
         }
       }
 
       for(var i = 0; i < newKeys.length; i++){
-        newFile = newList[newKeys[i]];
-        if(!confirmedFiles[newFile.name]) { //add new keys
-          confirmedFiles[newFile.name] = newFile
-          confirmedFiles[newFile.name].update = true
-          console.log(`New File ${newFile.name} was found (${newFile.sha})`);
+        var name = newKeys[i];
+        var newFile = newList[name];
+        if(!confirmedFiles[name]) { //add new keys
+          confirmedFiles[name] = newFile
+          confirmedFiles[name].update = true
+          console.log(`New File ${name} was found (${newFile.sha})`);
         }
       }
     }).catch(err => {

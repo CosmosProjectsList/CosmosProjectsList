@@ -63,7 +63,7 @@ class Tile extends Component {
           {this.state.file.reddit && <a href={this.state.file.reddit} target="_blank" rel="noopener noreferrer"><i className="fa fa-reddit social-glyph reddit-colour"></i></a>}
           {this.state.file.github && <a href={this.state.file.github} target="_blank" rel="noopener noreferrer"><i className="fa fa-github social-glyph github-colour"></i></a>}
           {this.state.file.bitbucket && <a href={this.state.file.bitbucket} target="_blank" rel="noopener noreferrer"><i className="fa fa-bitbucket social-glyph bitbucket-colour"></i></a>}
-          {this.state.file.chat && <a href={this.state.file.chat} target="_blank" rel="noopener noreferrer"><i className="fa fa-comment-o social-glyph"></i></a>}
+          {this.state.file.chat && <a href={this.state.file.chat} target="_blank" rel="noopener noreferrer"><i className="fa fa-comment-o social-glyph chat-colour"></i></a>}
           {this.state.file.facebook && <a href={this.state.file.facebook} target="_blank" rel="noopener noreferrer"><i className="fa fa-facebook social-glyph facebook-colour"></i></a>}
           {this.state.file.whitepaper && <a href={this.state.file.whitepaper} target="_blank" rel="noopener noreferrer"><i className="fa fa-file-o social-glyph whitepaper-colour"></i></a>}
           {this.state.file.lightpaper && <a href={this.state.file.lightpaper} target="_blank" rel="noopener noreferrer"><i className="fa fa-file-o social-glyph lightpaper-colour"></i></a>}
