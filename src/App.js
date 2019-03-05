@@ -54,16 +54,13 @@ class App extends Component {
             </div>
             
           </div>
-          <div className="row">
+          <div className="row tile-container">
             <div className="col-lg-12 text-center">
           {this.state.projectList.map(function(project, index){
             return <div className="row" key={`${index + 1}`}>
-            <div className="col-lg-1 text-center">
-              <h6>{`${index + 1}.`}</h6>
-            </div>
-            <div className="col-lg-11 text-center">
-              <Tile fileInfo={project} index={index + 1}/>
-            </div>
+              <div className="col-lg-12 text-center">
+                <Tile fileInfo={project} index={index + 1}/>
+              </div>
             </div>;
           })}
           </div>

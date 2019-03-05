@@ -1,12 +1,109 @@
+
+.tile-surround {
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 4px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-color: rgb(228, 228, 228);
+  margin-top: 5px;
+  margin-bottom: 5px;
+  background-color: rgb(219, 219, 219);
+
+}
+
+.tile-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.tile-name {
+  text-align: left;
+  align-content: center;
+  margin-top: 10px;
+}
+
+.tile-proof {
+  text-align: right;
+  align-content: center;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.tile-details {
+  text-align: right;
+  align-content: center;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.tile-text-area {
+  background-color: whitesmoke;
+  margin: 0px 10px 5px 10px
+}
+
+.tile-button {
+  background: whitesmoke;
+  width: 60px;
+  margin-top: 5px;
+  margin-bottom: 0px;
+  text-align: center;
+}
+
+.tile-glyphs {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 200px;
+}
+
+
 .text-center {
     text-align: center;
   }
 
   .social-glyph {
-    font-size: 27px;
+    font-size: 25px;
     margin-right: 8px;
     margin-left: 8px;
+    margin-top: 2px;
+    margin-bottom: 2px;
   }
+
+  @media only screen and (max-width: 1000px) {
+    .tile-button {
+      background: whitesmoke;
+      width: 93%;
+      margin-left: 10px;
+      margin-right: 10px;
+      margin-top: 5px;
+      margin-bottom: 0px;
+      text-align: center;
+    }
+
+    .tile-glyphs {
+      margin-top: 10px;
+      margin-bottom: 10px;
+      width: 93%;
+    }
+
+    .tile-name {
+      text-align: center;
+      align-content: center;
+      margin-top: 10px;
+      margin-top: -20px;
+    }
+
+    .tile-number {
+      text-align: left;
+      margin-left: 10px;
+      margin-top: 1px;
+    }
+}
+
 
   .twitter-colour {
     color: #38A1F3;
@@ -16,6 +113,14 @@
     color: #ff4301;
   }
   
+  .gitlab-colour {
+    color: #fc6d26;
+  }
+
+  .youtube-colour {
+    color: #ff0000;
+  }
+
   .telegram-colour {
     color: #0088cc;
   }

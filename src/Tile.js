@@ -49,12 +49,15 @@ class Tile extends Component {
     var id = this.state.index;
 
     return (
-    <div>
+    <div className="tile-surround">
     <div className="row">
-        <div className="col-lg-3 text-center">
+        <div className="col-lg-1 tile-number">
+          <h6>{`${this.state.index}.`}</h6>
+        </div>
+        <div className="col-lg-3 tile-name">
           <h5><a href={this.state.file.website} target="_blank" rel="noopener noreferrer">{this.state.file.name}</a></h5>
         </div>
-        <div className="col-lg-3 text-center">
+        <div className="col-lg-5 text-center tile-glyphs">
           {this.state.file.medium && <a href={this.state.file.medium} target="_blank" rel="noopener noreferrer"><i className="fa fa-medium social-glyph medium-colour"></i></a>}
           {this.state.file.twitter && <a href={this.state.file.twitter} target="_blank" rel="noopener noreferrer"><i className="fa fa-twitter social-glyph twitter-colour"></i></a>}
           {this.state.file.telegram && <a href={this.state.file.telegram} target="_blank" rel="noopener noreferrer"><i className="fa fa-telegram social-glyph telegram-colour"></i></a>}
@@ -69,18 +72,20 @@ class Tile extends Component {
           {this.state.file.lightpaper && <a href={this.state.file.lightpaper} target="_blank" rel="noopener noreferrer"><i className="fa fa-file-o social-glyph lightpaper-colour"></i></a>}
           {this.state.file.yellowpaper && <a href={this.state.file.yellowpaper} target="_blank" rel="noopener noreferrer"><i className="fa fa-file-o social-glyph yellowpaper-colour"></i></a>}
           {this.state.file.fundingpaper && <a href={this.state.file.fundingpaper} target="_blank" rel="noopener noreferrer"><i className="fa fa-file-o social-glyph fundingpaper-colour"></i></a>}
-          {this.state.file.email && <a href={this.state.file.email} target="_blank" rel="noopener noreferrer"><i className="fa fa-email social-glyph"></i></a>}
+          {this.state.file.email && <a href={`mailto:${this.state.file.email}`} target="_blank" rel="noopener noreferrer"><i className="fa fa-email social-glyph"></i></a>}
+          {this.state.file.youtube && <a href={this.state.file.youtube} target="_blank" rel="noopener noreferrer"><i class="fa fa-youtube-play social-glyph youtube-colour"></i></a>}
+          {this.state.file.gitlab && <a href={this.state.file.gitlab} target="_blank" rel="noopener noreferrer"><i class="fa fa-gitlab social-glyph gitlab-colour"></i></a>}
         </div>
-        <div className="col-lg-2 text-center">
+        <div className="col-lg-1 text-center">
           <p>
-            {this.state.file.description_long && <button className="btn btn-primary" type="button" data-toggle="collapse" data-target={`#collapseInfo${id}`} aria-expanded="false" aria-controls={`collapseInfo${id}`}>
+            {this.state.file.description_long && <button className="btn btn-outline-info btn-sm tile-button" type="button" data-toggle="collapse" data-target={`#collapseInfo${id}`} aria-expanded="false" aria-controls={`collapseInfo${id}`}>
               Details
             </button>}
           </p>
         </div>
-        <div className="col-lg-2 text-center">
+        <div className="col-lg-1 text-center">
           <p>
-            {this.state.file.proof && <button className="btn btn-primary" type="button" data-toggle="collapse" data-target={`#collapseProof${id}`} aria-expanded="false" aria-controls={`collapseProof${id}`}>
+            {this.state.file.proof && <button className="btn btn-outline-secondary btn-sm tile-button" type="button" data-toggle="collapse" data-target={`#collapseProof${id}`} aria-expanded="false" aria-controls={`collapseProof${id}`}>
               Proof
             </button>}
           </p>
@@ -88,7 +93,7 @@ class Tile extends Component {
       </div>
       {this.state.file.description && <div className="row">
         <div className="col-lg-12 text-center">
-          <div className="card card-body">
+          <div className="card card-body tile-text-area ">
             {this.state.file.description}
           </div>
       </div>
@@ -96,7 +101,7 @@ class Tile extends Component {
       {this.state.file.description_long && <div className="row">
         <div className="col-lg-12 text-center">
         <div className="collapse" id={`collapseInfo${id}`}>
-          <div className="card card-body">
+          <div className="card card-body tile-text-area ">
           {this.state.file.description_long.map(function(line, index) {
             return <p>{`${line}`} </p>
           })}
@@ -107,7 +112,7 @@ class Tile extends Component {
       {this.state.file.proof && <div className="row">
         <div className="col-lg-12 text-center">
         <div className="collapse" id={`collapseProof${id}`}>
-          <div className="card card-body">
+          <div className="card card-body tile-text-area ">
           {this.state.file.proof.map(function(line, index) {
             return <p>{`${line}`} </p>
           })}
