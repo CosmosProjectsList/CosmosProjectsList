@@ -43,9 +43,10 @@ class App extends Component {
 
     return (
       <div className="App">
+      <div className="page-background">
        <div className="container">
           <div className="row">
-            <div className="col-lg-12 text-center">
+            <div className="col-lg-12 text-center page-title">
               <h2 className="mt-5">
                 {`Found ${this.state.projectList.length} Ecosystem Projects :)`}
                 <br/>
@@ -66,6 +67,7 @@ class App extends Component {
           </div>
           </div>
         
+      </div>
       </div>
       </div>
     );

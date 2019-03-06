@@ -1,19 +1,41 @@
 
+.page-title{
+  color: white;
+  font-weight: 800;
+  padding:0px;
+  white-space: pre-wrap;
+  height: 100px;
+  margin:0px;
+  text-shadow: 
+  0 0 1px rgba(124, 0, 124, 0.75),
+  0 0 2px rgba(124, 0, 124, 0.75),
+  0 0 3px rgba(124, 0, 124, 0.75),
+  0 0 4px rgba(124, 0, 124, 0.75),
+  0 0 5px rgba(124, 0, 124, 0.75),
+  0 0 6px rgba(124, 0, 124, 0.75),
+  0 0 7px rgba(124, 0, 124, 0.75),
+  0 0 8px rgba(124, 0, 124, 0.75),
+  0 0 9px rgba(124, 0, 124, 0.75);
+  margin-bottom: 30px;
+}
+
+
+
 .tile-surround {
   border-style: solid;
   border-width: 1px;
   border-radius: 4px;
   padding-top: 5px;
   padding-bottom: 5px;
-  border-color: rgb(228, 228, 228);
+  border-color: rgba(228, 228, 228);
   margin-top: 5px;
   margin-bottom: 5px;
-  background-color: rgb(219, 219, 219);
-
+  background-color: rgba(124, 0, 124, 0.75);
 }
 
 .tile-container {
   max-width: 800px;
+  width: 80%;
   margin: 0 auto;
 }
 
@@ -23,7 +45,16 @@
   margin-top: 10px;
 }
 
+a:link {
+  color: yellow;
+}
+
+a:visited {
+  color: gold;
+}
+
 .tile-proof {
+  
   text-align: right;
   align-content: center;
   padding-left: 10px;
@@ -41,13 +72,23 @@
   margin-right: 10px;
 }
 
+.tile-button-default {
+  color: rgb(98, 161, 255);;
+}
+
+#tile-button-default:hover{
+  color: rgb(98, 161, 255);;
+}
+
+
 .tile-text-area {
-  background-color: whitesmoke;
-  margin: 0px 10px 5px 10px
+  background-color: rgba(255, 255, 255, 0.637);
+  margin: 0px 10px 5px 10px;
+  color: rgb(66, 0, 61);
+  font-weight: 600;
 }
 
 .tile-button {
-  background: whitesmoke;
   width: 60px;
   margin-top: 5px;
   margin-bottom: 0px;
@@ -66,6 +107,7 @@
   }
 
   .social-glyph {
+    color: rgba(21, 255, 0, 0.808);
     font-size: 25px;
     margin-right: 8px;
     margin-left: 8px;
@@ -73,9 +115,12 @@
     margin-bottom: 2px;
   }
 
-  @media only screen and (max-width: 1000px) {
+  .tile-number {
+    color: rgb(255, 0, 255);
+  }
+
+  @media only screen and (max-width: 900px) {
     .tile-button {
-      background: whitesmoke;
       width: 93%;
       margin-left: 10px;
       margin-right: 10px;
@@ -103,7 +148,6 @@
       margin-top: 1px;
     }
 }
-
 
   .twitter-colour {
     color: #38A1F3;

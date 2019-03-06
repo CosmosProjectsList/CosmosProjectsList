@@ -6,9 +6,32 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: url("images/devcorn.png");
+  background-size: 100%;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.main-navbar {
+ background-color: rgba(255, 0, 221, 0.76);
+}
+
+.text-navbar {
+  color: white !important;
+  font-weight: 700;
+  white-space: pre-wrap;
+  text-shadow: 
+  0 0 1px rgba(124, 0, 124, 0.75),
+  0 0 2px rgba(124, 0, 124, 0.75),
+  0 0 3px rgba(124, 0, 124, 0.75),
+  0 0 4px rgba(124, 0, 124, 0.75),
+  0 0 5px rgba(124, 0, 124, 0.75),
+  0 0 6px rgba(124, 0, 124, 0.75),
+  0 0 7px rgba(124, 0, 124, 0.75),
+  0 0 8px rgba(124, 0, 124, 0.75),
+  0 0 9px rgba(124, 0, 124, 0.75);
+  
+ }
