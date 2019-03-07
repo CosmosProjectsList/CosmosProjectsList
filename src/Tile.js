@@ -51,13 +51,13 @@ class Tile extends Component {
     return (
     <div className="tile-surround">
     <div className="row">
-        <div className="col-lg-1 tile-number">
+        <div className="tile-number">
           <h6>{`${this.state.index}.`}</h6>
         </div>
-        <div className="col-lg-3 tile-name">
+        <div className="tile-name">
           <h5><a href={this.state.file.website} target="_blank" rel="noopener noreferrer">{this.state.file.name}</a></h5>
         </div>
-        <div className="col-lg-5 text-center tile-glyphs">
+        <div className="text-center tile-glyphs">
           {this.state.file.medium && <a href={this.state.file.medium} target="_blank" rel="noopener noreferrer"><i className="fa fa-medium social-glyph"></i></a>}
           {this.state.file.twitter && <a href={this.state.file.twitter} target="_blank" rel="noopener noreferrer"><i className="fa fa-twitter social-glyph"></i></a>}
           {this.state.file.telegram && <a href={this.state.file.telegram} target="_blank" rel="noopener noreferrer"><i className="fa fa-telegram social-glyph"></i></a>}
@@ -72,20 +72,20 @@ class Tile extends Component {
           {this.state.file.lightpaper && <a href={this.state.file.lightpaper} target="_blank" rel="noopener noreferrer"><i className="fa fa-file-o social-glyph"></i></a>}
           {this.state.file.yellowpaper && <a href={this.state.file.yellowpaper} target="_blank" rel="noopener noreferrer"><i className="fa fa-file-o social-glyph"></i></a>}
           {this.state.file.fundingpaper && <a href={this.state.file.fundingpaper} target="_blank" rel="noopener noreferrer"><i className="fa fa-file-o social-glyph"></i></a>}
-          {this.state.file.email && <a href={`mailto:${this.state.file.email}`} target="_blank" rel="noopener noreferrer"><i className="fa fa-email social-glyph"></i></a>}
+          {this.state.file.email && <a href={`mailto:${this.state.file.email}`} target="_blank" rel="noopener noreferrer"><i className="fa fa-at social-glyph"></i></a>}
           {this.state.file.youtube && <a href={this.state.file.youtube} target="_blank" rel="noopener noreferrer"><i class="fa fa-youtube-play social-glyph"></i></a>}
           {this.state.file.gitlab && <a href={this.state.file.gitlab} target="_blank" rel="noopener noreferrer"><i class="fa fa-gitlab social-glyph"></i></a>}
         </div>
-        <div className="col-lg-1 text-center">
+        <div className="tile-buttons">
           <p>
-            {this.state.file.description_long && <button className="btn btn-outline-info btn-sm tile-button tile-button-default" type="button" data-toggle="collapse" data-target={`#collapseInfo${id}`} aria-expanded="false" aria-controls={`collapseInfo${id}`}>
+            {this.state.file.description_long && <button className="tile-button" type="button" data-toggle="collapse" data-target={`#collapseInfo${id}`} aria-expanded="false" aria-controls={`collapseInfo${id}`}>
               Details
             </button>}
           </p>
         </div>
-        <div className="col-lg-1 text-center">
+        <div className="tile-buttons">
           <p>
-            {this.state.file.proof && <button className="btn btn-outline-info btn-sm tile-button tile-button-default" type="button" data-toggle="collapse" data-target={`#collapseProof${id}`} aria-expanded="false" aria-controls={`collapseProof${id}`}>
+            {this.state.file.proof && <button className="tile-button" type="button" data-toggle="collapse" data-target={`#collapseProof${id}`} aria-expanded="false" aria-controls={`collapseProof${id}`}>
               Proof
             </button>}
           </p>

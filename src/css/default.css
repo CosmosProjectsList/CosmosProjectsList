@@ -35,14 +35,25 @@
 
 .tile-container {
   max-width: 800px;
-  width: 80%;
   margin: 0 auto;
 }
 
 .tile-name {
+  width: 150px;
+  margin-left: 20px;
   text-align: left;
   align-content: center;
   margin-top: 10px;
+  text-shadow: 
+  0 0 1px rgba(255, 238, 0, 0.1),
+  0 0 2px rgba(255, 238, 0, 0.1),
+  0 0 3px rgba(255, 238, 0, 0.1),
+  0 0 4px rgba(255, 238, 0, 0.1),
+  0 0 5px rgba(255, 238, 0, 0.1),
+  0 0 6px rgba(255, 238, 0, 0.1),
+  0 0 7px rgba(255, 238, 0, 0.1),
+  0 0 8px rgba(255, 238, 0, 0.1),
+  0 0 9px rgba(255, 238, 0, 0.1);
 }
 
 a:link {
@@ -72,39 +83,70 @@ a:visited {
   margin-right: 10px;
 }
 
-.tile-button-default {
-  color: rgb(98, 161, 255);;
+.tile-buttons {
+width: 100px;
 }
 
-#tile-button-default:hover{
-  color: rgb(98, 161, 255);;
+.tile-button {
+  border-radius: 6px;
+  width: 80px;
+  margin-top: 10px;
+  padding-right: 5px;
+  padding-left: 5px;
+  color: rgb(98, 161, 255);
+  text-shadow: 
+  0 0 1px rgba(0, 238, 255, 0.1),
+  0 0 2px rgba(0, 238, 255, 0.1),
+  0 0 3px rgba(0, 238, 255, 0.1),
+  0 0 4px rgba(0, 238, 255, 0.1),
+  0 0 5px rgba(0, 238, 255, 0.1),
+  0 0 6px rgba(0, 238, 255, 0.1),
+  0 0 7px rgba(0, 238, 255, 0.1),
+  0 0 8px rgba(0, 238, 255, 0.1),
+  0 0 9px rgba(0, 238, 255, 0.1);
+  height: 32px;
+  border: 2px solid rgb(0, 174, 255);
+  background-color: rgba(255, 255, 255, 0);
+  font-size: 18px;
+  font-weight: 600px;
+  cursor: pointer;
+}
+
+
+
+.tile-button:hover {
+  color: rgb(189, 231, 255);
+  border: 2px solid rgb(189, 231, 255);
+  background-color: rgb(0, 174, 255);
 }
 
 
 .tile-text-area {
   background-color: rgba(255, 255, 255, 0.637);
   margin: 0px 10px 5px 10px;
-  color: rgb(66, 0, 61);
+  color: rgb(69, 0, 71);
   font-weight: 600;
-}
-
-.tile-button {
-  width: 60px;
-  margin-top: 5px;
-  margin-bottom: 0px;
-  text-align: center;
+  text-shadow: 
+  0 0 1px rgba(234, 0, 255, 0.06),
+  0 0 2px rgba(234, 0, 255, 0.06),
+  0 0 3px rgba(234, 0, 255, 0.06),
+  0 0 4px rgba(234, 0, 255, 0.06),
+  0 0 5px rgba(234, 0, 255, 0.06),
+  0 0 6px rgba(234, 0, 255, 0.06),
+  0 0 7px rgba(234, 0, 255, 0.06),
+  0 0 8px rgba(234, 0, 255, 0.06),
+  0 0 9px rgba(234, 0, 255, 0.06);
 }
 
 .tile-glyphs {
   margin-top: 10px;
   margin-bottom: 10px;
-  width: 200px;
+  width: 350px;
 }
 
-
-.text-center {
+ .text-center {
     text-align: center;
-  }
+ }
 
   .social-glyph {
     color: rgba(21, 255, 0, 0.808);
@@ -113,15 +155,50 @@ a:visited {
     margin-left: 8px;
     margin-top: 2px;
     margin-bottom: 2px;
+    text-shadow: 
+  0 0 1px rgba(60, 255, 0, 0.06),
+  0 0 2px rgba(60, 255, 0, 0.06),
+  0 0 3px rgba(60, 255, 0, 0.06),
+  0 0 4px rgba(60, 255, 0, 0.06),
+  0 0 5px rgba(60, 255, 0, 0.06),
+  0 0 6px rgba(60, 255, 0, 0.06),
+  0 0 7px rgba(60, 255, 0, 0.06),
+  0 0 8px rgba(60, 255, 0, 0.06),
+  0 0 9px rgba(60, 255, 0, 0.06);
   }
 
   .tile-number {
+    width: 50px;
+    padding-left: 16px;
     color: rgb(255, 0, 255);
+    text-shadow: 
+  0 0 1px rgba(234, 0, 255, 0.06),
+  0 0 2px rgba(234, 0, 255, 0.06),
+  0 0 3px rgba(234, 0, 255, 0.06),
+  0 0 4px rgba(234, 0, 255, 0.06),
+  0 0 5px rgba(234, 0, 255, 0.06),
+  0 0 6px rgba(234, 0, 255, 0.06),
+  0 0 7px rgba(234, 0, 255, 0.06),
+  0 0 8px rgba(234, 0, 255, 0.06),
+  0 0 9px rgba(234, 0, 255, 0.06);
+    
   }
 
   @media only screen and (max-width: 900px) {
+    .tile-surround{
+      min-width: 350px;
+    }
+    
+    .tile-buttons {
+      width: 93%;;
+      min-width: 350px;
+      margin: 0 auto;
+      position: relative;
+    }
+
     .tile-button {
       width: 93%;
+      min-width: 350px;
       margin-left: 10px;
       margin-right: 10px;
       margin-top: 5px;
@@ -130,21 +207,23 @@ a:visited {
     }
 
     .tile-glyphs {
-      margin-top: 10px;
-      margin-bottom: 10px;
+      padding-top: 5px;
+      padding-bottom: 10px;
       width: 93%;
+      margin: 0 auto;
+      position: relative;
     }
 
     .tile-name {
       text-align: center;
       align-content: center;
-      margin-top: 10px;
-      margin-top: -20px;
+      margin-top: 5px;
+      min-width: 350px;
     }
 
     .tile-number {
       text-align: left;
-      margin-left: 10px;
+      margin-left: 15px;
       margin-top: 1px;
     }
 }
