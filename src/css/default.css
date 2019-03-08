@@ -17,6 +17,7 @@
   0 0 8px rgba(124, 0, 124, 0.75),
   0 0 9px rgba(124, 0, 124, 0.75);
   margin-bottom: 30px;
+  margin-top: 60px;
 }
 
 
@@ -184,21 +185,46 @@ width: 100px;
     
   }
 
-  @media only screen and (max-width: 900px) {
+  .edit-glyph {
+    color: rgb(255, 145, 0);
+    font-size: 12px;
+    margin-top: 0px;
+    margin-left: 5px;
+    padding-right: 25px;
+    position: absolute;
+
+    text-shadow: 
+  0 0 1px rgba(238, 255, 0, 0.1),
+  0 0 2px rgba(238, 255, 0, 0.1),
+  0 0 3px rgba(238, 255, 0, 0.1),
+  0 0 4px rgba(238, 255, 0, 0.1),
+  0 0 5px rgba(238, 255, 0, 0.1),
+  0 0 6px rgba(238, 255, 0, 0.1),
+  0 0 7px rgba(238, 255, 0, 0.1),
+  0 0 8px rgba(238, 255, 0, 0.1),
+  0 0 9px rgba(238, 255, 0, 0.1);
+  }
+  
+
+
+
+  @media only screen and (max-width: 950px) {
+    
+    
+    
     .tile-surround{
       min-width: 350px;
     }
     
     .tile-buttons {
-      width: 93%;;
-      min-width: 350px;
+      width: 93%;
+      
       margin: 0 auto;
       position: relative;
     }
 
     .tile-button {
       width: 93%;
-      min-width: 350px;
       margin-left: 10px;
       margin-right: 10px;
       margin-top: 5px;
@@ -218,7 +244,7 @@ width: 100px;
       text-align: center;
       align-content: center;
       margin-top: 5px;
-      min-width: 350px;
+      width: 95%;
     }
 
     .tile-number {
@@ -227,6 +253,9 @@ width: 100px;
       margin-top: 1px;
     }
 }
+
+
+
 
   .twitter-colour {
     color: #38A1F3;

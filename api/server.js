@@ -15,11 +15,13 @@ const fileListRefresh = () => {
       var newList = {}
       for(var i = 0; i < res.data.length; i++){
         file = res.data[i]
+        var editLink = file["_links"]["html"].replace("/blob/","/edit/");
         newList[file.name] = {
           "name": file.name,
           "size": file.size,
           "sha": file.sha,
-          "download_url": file.download_url
+          "download_url": file.download_url,
+          "edit": editLink
         }
       }
 

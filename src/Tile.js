@@ -55,7 +55,10 @@ class Tile extends Component {
           <h6>{`${this.state.index}.`}</h6>
         </div>
         <div className="tile-name">
-          <h5><a href={this.state.file.website} target="_blank" rel="noopener noreferrer">{this.state.file.name}</a></h5>
+          <h5><a href={this.state.file.website} target="_blank" rel="noopener noreferrer">{this.state.file.name}</a>
+          <a href={this.state.fileInfo.edit} target="_blank" rel="noopener noreferrer"><i class="fa fa-pencil-square-o edit-glyph"></i></a>
+          </h5>
+          
         </div>
         <div className="text-center tile-glyphs">
           {this.state.file.medium && <a href={this.state.file.medium} target="_blank" rel="noopener noreferrer"><i className="fa fa-medium social-glyph"></i></a>}
