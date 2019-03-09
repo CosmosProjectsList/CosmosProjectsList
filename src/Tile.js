@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import ex from './scripts/extentions'
 import './css/default.css';
+import { CopyToClipboard } from 'react-copy-to-clipboard';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 class Tile extends Component {
 
@@ -10,14 +13,24 @@ class Tile extends Component {
     this.state = {
       "fileInfo": props.fileInfo,
       "index": props.index,
-      "file": undefined
+      "isShared": props.isShared,
+      "file": undefined,
+      "location": props.location || {},
+      "scrollRef": props.scrollRef,
     }
 
     this.loadProjectDetails.bind(this);
+    this.scrollTrigger.bind(this);
   }
 
   componentDidMount() {
     this.loadProjectDetails()
+  }
+
+  scrollTrigger() {
+    ex.sleep(1500).then(() => {
+      window.scrollTo(0, this.state.scrollRef.current.offsetTop);
+    });
   }
 
   loadProjectDetails() {
@@ -31,12 +44,16 @@ class Tile extends Component {
     axios.get(url).then(res => { //fetch file list from github
       var file = res.data;
       if(!ex.jsonEqual(this.state.file, file)){
-        console.log(`Loaded: ${file.name}`)
+        //console.log(`Loaded: ${file.name}`)
         this.setState({"file": file})
       }
     }).catch(err => {
       console.log(err);
       console.log(`Failed To Fetch Projects Details from '${url}' :(`);
+    }).then(() => {
+      if(this.state.scrollRef){
+        this.scrollTrigger();
+      }
     })
   }
 
@@ -49,16 +66,26 @@ class Tile extends Component {
     var id = this.state.index;
 
     return (
-    <div className="tile-surround">
+    <div className={`tile-surround ${!!this.state.isShared ? "tile-surround-shared" : ""}`}>
     <div className="row">
         <div className="tile-number">
           <h6>{`${this.state.index}.`}</h6>
         </div>
         <div className="tile-name">
-          <h5><a href={this.state.file.website} target="_blank" rel="noopener noreferrer">{this.state.file.name}</a>
-          <a href={this.state.fileInfo.edit} target="_blank" rel="noopener noreferrer"><i class="fa fa-pencil-square-o edit-glyph"></i></a>
-          </h5>
+          <h5>
+            <CopyToClipboard text={`${this.state.location.origin}?share=${encodeURI(this.state.fileInfo.name.slice(0,-5))}`} onCopy={() => { toast("Share link was copied!", { 
+              autoClose: 1500, 
+              className: "copy-notification",
+              hideProgressBar: true
+            
+            }) 
+              }}>
+              <i className="fa fa-share-alt-square share-glyph"></i>  
+            </CopyToClipboard>
           
+            <a href={this.state.file.website} target="_blank" rel="noopener noreferrer">{this.state.file.name}</a>
+            <a href={this.state.fileInfo.edit} target="_blank" rel="noopener noreferrer"><i className="fa fa-pencil-square-o edit-glyph"></i></a>
+          </h5>
         </div>
         <div className="text-center tile-glyphs">
           {this.state.file.medium && <a href={this.state.file.medium} target="_blank" rel="noopener noreferrer"><i className="fa fa-medium social-glyph"></i></a>}
@@ -76,8 +103,8 @@ class Tile extends Component {
           {this.state.file.yellowpaper && <a href={this.state.file.yellowpaper} target="_blank" rel="noopener noreferrer"><i className="fa fa-file-o social-glyph"></i></a>}
           {this.state.file.fundingpaper && <a href={this.state.file.fundingpaper} target="_blank" rel="noopener noreferrer"><i className="fa fa-file-o social-glyph"></i></a>}
           {this.state.file.email && <a href={`mailto:${this.state.file.email}`} target="_blank" rel="noopener noreferrer"><i className="fa fa-at social-glyph"></i></a>}
-          {this.state.file.youtube && <a href={this.state.file.youtube} target="_blank" rel="noopener noreferrer"><i class="fa fa-youtube-play social-glyph"></i></a>}
-          {this.state.file.gitlab && <a href={this.state.file.gitlab} target="_blank" rel="noopener noreferrer"><i class="fa fa-gitlab social-glyph"></i></a>}
+          {this.state.file.youtube && <a href={this.state.file.youtube} target="_blank" rel="noopener noreferrer"><i className="fa fa-youtube-play social-glyph"></i></a>}
+          {this.state.file.gitlab && <a href={this.state.file.gitlab} target="_blank" rel="noopener noreferrer"><i className="fa fa-gitlab social-glyph"></i></a>}
         </div>
         <div className="tile-buttons">
           <p>
@@ -106,7 +133,7 @@ class Tile extends Component {
         <div className="collapse" id={`collapseInfo${id}`}>
           <div className="card card-body tile-text-area ">
           {this.state.file.description_long.map(function(line, index) {
-            return <p>{`${line}`} </p>
+            return <p key={`description-${id}-${index}`}>{`${line}`} </p>
           })}
           </div>
         </div>
@@ -117,12 +144,13 @@ class Tile extends Component {
         <div className="collapse" id={`collapseProof${id}`}>
           <div className="card card-body tile-text-area ">
           {this.state.file.proof.map(function(line, index) {
-            return <p>{`${line}`} </p>
+            return <p key={`proof-${id}-${index}`}>{`${line}`} </p>
           })}
           </div>
         </div>
       </div>
       </div>}
+      
     </div>);
   }
 }

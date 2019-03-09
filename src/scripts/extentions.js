@@ -17,3 +17,9 @@ function jsonEqual(obj1, obj2){
 }
 
 module.exports.jsonEqual = jsonEqual;
+
+function sleep(ms) {
+    return new Promise((resolve) => setTimeout(resolve, ms));
+  }
+
+  module.exports.sleep = sleep;

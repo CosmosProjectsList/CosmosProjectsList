@@ -2,14 +2,23 @@ import React, { Component } from 'react';
 import './App.css';
 import Tile from './Tile'
 import ex from './scripts/extentions'
+import qs from 'query-string'
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 class App extends Component {
 
   constructor(props){
     super(props)
+    var query = qs.parse(props.location.search);
     this.state = {
-      "projectList": []
+      "projectList": [],
+      "query": query,
+      "location": window.location,
+      "isScrolled": false,
+      "scrollRef": React.createRef()
     }
+
   }
 
   componentDidMount() {
@@ -19,6 +28,10 @@ class App extends Component {
 
   componentWillUnmount() {
     clearInterval(this.interval);
+  }
+
+  componentDidUpdate() {
+    
   }
 
   projectListFetchTimer() {
@@ -41,6 +54,10 @@ class App extends Component {
       return (<div className="App">Loading...</div>);
     }
 
+    var sharedProjectName = (this.state.query.share || "");
+    var location = this.state.location;
+    var scrollRef = this.state.scrollRef;
+
     return (
       <div className="App">
       <div className="page-background">
@@ -59,8 +76,8 @@ class App extends Component {
             <div className="col-lg-12 text-center">
           {this.state.projectList.map(function(project, index){
             return <div className="row" key={`${index + 1}`}>
-              <div className="col-lg-12 text-center">
-                <Tile fileInfo={project} index={index + 1}/>
+              <div className="col-lg-12 text-center" ref={(project.name || {}).replace(".json", "") === sharedProjectName ? scrollRef : undefined} >
+                <Tile fileInfo={project} index={index + 1} isShared={(project.name || {}).replace(".json", "") === sharedProjectName} location={location} scrollRef={scrollRef}/>
               </div>
             </div>;
           })}
@@ -69,6 +86,7 @@ class App extends Component {
         
       </div>
       </div>
+      <ToastContainer />
       </div>
     );
   }
