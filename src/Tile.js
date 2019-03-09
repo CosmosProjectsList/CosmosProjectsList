@@ -135,7 +135,7 @@ class Tile extends Component {
       </div>}
       {this.state.file.description_long && <div className="row">
         <div className="col-lg-12 text-center">
-        <div className="collapse" id={`collapseInfo${id}`}>
+        <div className={`collapse ${isShared ? "show" : ""}`} id={`collapseInfo${id}`}>
           <div className="card card-body tile-text-area ">
           {this.state.file.description_long.map(function(line, index) {
             return <p key={`description-${id}-${index}`}>{`${line}`} </p>
@@ -146,7 +146,7 @@ class Tile extends Component {
       </div>}
       {this.state.file.proof && <div className="row">
         <div className="col-lg-12 text-center">
-        <div className={`collapse ${isShared ? "show" : ""}`} id={`collapseProof${id}`}>
+        <div className={`collapse`} id={`collapseProof${id}`}>
           <div className="card card-body tile-text-area ">
           {this.state.file.proof.map(function(line, index) {
             return <p key={`proof-${id}-${index}`}>{`${line}`} </p>
