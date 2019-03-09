@@ -29,7 +29,9 @@ class Tile extends Component {
 
   scrollTrigger() {
     ex.sleep(1500).then(() => {
-      window.scrollTo(0, this.state.scrollRef.current.offsetTop);
+      if(!!this.state.scrollRef.current && !!this.state.scrollRef.current.offsetTop) {
+        window.scrollTo(0, this.state.scrollRef.current.offsetTop);
+      }
     });
   }
 
@@ -43,15 +45,17 @@ class Tile extends Component {
 
     axios.get(url).then(res => { //fetch file list from github
       var file = res.data;
+      
       if(!ex.jsonEqual(this.state.file, file)){
         //console.log(`Loaded: ${file.name}`)
         this.setState({"file": file})
       }
+
     }).catch(err => {
       console.log(err);
       console.log(`Failed To Fetch Projects Details from '${url}' :(`);
     }).then(() => {
-      if(this.state.scrollRef){
+      if(!!this.state.scrollRef){
         this.scrollTrigger();
       }
     })
