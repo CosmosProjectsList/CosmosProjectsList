@@ -28,7 +28,7 @@ class Tile extends Component {
   }
 
   scrollTrigger() {
-    ex.sleep(1500).then(() => {
+    ex.sleep(1000).then(() => {
       if(!!this.state.scrollRef.current && !!this.state.scrollRef.current.offsetTop) {
         window.scrollTo(0, this.state.scrollRef.current.offsetTop);
       }
@@ -68,9 +68,10 @@ class Tile extends Component {
     }
 
     var id = this.state.index;
+    var isShared = !!this.state.isShared;
 
     return (
-    <div className={`tile-surround ${!!this.state.isShared ? "tile-surround-shared" : ""}`}>
+    <div className={`tile-surround ${isShared ? "tile-surround-shared" : ""}`}>
     <div className="row">
         <div className="tile-number">
           <h6>{`${this.state.index}.`}</h6>
@@ -145,7 +146,7 @@ class Tile extends Component {
       </div>}
       {this.state.file.proof && <div className="row">
         <div className="col-lg-12 text-center">
-        <div className="collapse" id={`collapseProof${id}`}>
+        <div className={`collapse ${isShared ? "show" : ""}`} id={`collapseProof${id}`}>
           <div className="card card-body tile-text-area ">
           {this.state.file.proof.map(function(line, index) {
             return <p key={`proof-${id}-${index}`}>{`${line}`} </p>
