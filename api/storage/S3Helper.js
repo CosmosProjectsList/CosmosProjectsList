@@ -8,7 +8,8 @@ module.exports = class S3Helper {
     constructor() {
         var defaultCredentialsPaths = [ 
             "K:\\local\\AWS\\default-credentials.json",
-            "/K/local/AWS/default-credentials.json" 
+            "/K/local/AWS/default-credentials.json",
+            "/var/secrets/default-credentials.json" 
           ];
           
           //LOCALHOST ONLY
