@@ -41,6 +41,11 @@ class App extends Component {
       var arr=ex.json2array(body);
       if(!ex.jsonEqual(this.state.projectList, arr)){
         console.log("Found New Projects :)")
+
+        //console.log(arr)
+        arr.sort((a, b) => Number(b["like-hits"]) - Number(a["like-hits"]));
+        //console.log(arr)
+
         this.setState({"projectList": arr})
       }
     }).catch(err => {

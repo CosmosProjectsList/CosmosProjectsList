@@ -1,10 +1,12 @@
 {
-  "proxy": "http://localhost:5000",
+  "proxy": "http://localhost:6000",
   "name": "react-tutorial",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "aws-sdk": "^2.418.0",
     "axios": "^0.18.0",
+    "bluebird": "^3.5.3",
     "body-parser": "^1.18.3",
     "concurrently": "^4.1.0",
     "express": "^4.16.4",

@@ -192,6 +192,177 @@ width: 100px;
   0 0 9px rgba(60, 255, 0, 0.2);
   }
 
+  .social-hearth {
+    color: rgba(0, 22, 63, 0.26);
+    font-size: 20px;
+    text-shadow: 
+  0 0 1px rgba(0, 0, 0, 0.1),
+  0 0 2px rgba(0, 0, 0, 0.1),
+  0 0 3px rgba(0, 0, 0, 0.1),
+  0 0 4px rgba(0, 0, 0, 0.1),
+  0 0 5px rgba(0, 0, 0, 0.1),
+  0 0 6px rgba(0, 0, 0, 0.1),
+  0 0 7px rgba(0, 0, 0, 0.1),
+  0 0 8px rgba(0, 0, 0, 0.1),
+  0 0 9px rgba(0, 0, 0, 0.1),
+  }
+
+  .social-hearth:hover {
+    color: rgb(255, 0, 255);
+    margin-top: -2px;
+    margin-left: -2px;
+    font-size: 25px;
+    cursor: pointer !important;
+    text-shadow: 
+    0 0 1px rgba(0, 0, 0, 0.06),
+  0 0 2px rgba(0, 0, 0, 0.06),
+  0 0 3px rgba(0, 0, 0, 0.06),
+  0 0 4px rgba(0, 0, 0, 0.06),
+  0 0 5px rgba(0, 0, 0, 0.06),
+  0 0 6px rgba(0, 0, 0, 0.06),
+  0 0 7px rgba(0, 0, 0, 0.06),
+  0 0 8px rgba(0, 0, 0, 0.06),
+  0 0 9px rgba(0, 0, 0, 0.06),
+  }
+
+  .tile-heart {
+    width: 90%;
+    position: absolute;
+    top: 6px;
+    text-shadow: 
+  0 0 1px rgba(234, 0, 255, 0.06),
+  0 0 2px rgba(234, 0, 255, 0.06),
+  0 0 3px rgba(234, 0, 255, 0.06),
+  0 0 4px rgba(234, 0, 255, 0.06),
+  0 0 5px rgba(234, 0, 255, 0.06),
+  0 0 6px rgba(234, 0, 255, 0.06),
+  0 0 7px rgba(234, 0, 255, 0.06),
+  0 0 8px rgba(234, 0, 255, 0.06),
+  0 0 9px rgba(234, 0, 255, 0.06);
+    
+  }
+
+  .tile-text-like {
+    font-weight: 600;
+    font-size: 16px;
+    position: absolute;
+    top: -3px;
+    left: 8px;
+    color: rgba(0, 22, 63, 0.637);
+    text-shadow: 
+  0 0 1px rgba(0, 0, 0, 0.03),
+  0 0 2px rgba(0, 0, 0, 0.03),
+  0 0 3px rgba(0, 0, 0, 0.03),
+  0 0 4px rgba(0, 0, 0, 0.03),
+  0 0 5px rgba(0, 0, 0, 0.03),
+  0 0 6px rgba(0, 0, 0, 0.03),
+  0 0 7px rgba(0, 0, 0, 0.03),
+  0 0 8px rgba(0, 0, 0, 0.03),
+  0 0 9px rgba(0, 0, 0, 0.03);
+  }
+
+  .tile-text-social-counter {
+    font-weight: 600;
+    font-size: 13px;
+    margin-top: -3px;
+    margin-left: 5px;
+    color: rgba(43, 255, 0, 0.637);
+    text-shadow: 
+  0 0 1px rgba(0, 0, 0, 0.03),
+  0 0 2px rgba(0, 0, 0, 0.03),
+  0 0 3px rgba(0, 0, 0, 0.03),
+  0 0 4px rgba(0, 0, 0, 0.03),
+  0 0 5px rgba(0, 0, 0, 0.03),
+  0 0 6px rgba(0, 0, 0, 0.03),
+  0 0 7px rgba(0, 0, 0, 0.03),
+  0 0 8px rgba(0, 0, 0, 0.03),
+  0 0 9px rgba(0, 0, 0, 0.03);
+  }
+
+  .tile-text-page-counter {
+    font-weight: 600;
+    font-size: 13px;
+    margin-top: -3px;
+    margin-left: 5px;
+    color: rgba(255, 251, 0, 0.637);
+    text-shadow: 
+  0 0 1px rgba(0, 0, 0, 0.03),
+  0 0 2px rgba(0, 0, 0, 0.03),
+  0 0 3px rgba(0, 0, 0, 0.03),
+  0 0 4px rgba(0, 0, 0, 0.03),
+  0 0 5px rgba(0, 0, 0, 0.03),
+  0 0 6px rgba(0, 0, 0, 0.03),
+  0 0 7px rgba(0, 0, 0, 0.03),
+  0 0 8px rgba(0, 0, 0, 0.03),
+  0 0 9px rgba(0, 0, 0, 0.03);
+  }
+
+  .tile-text-info-counter {
+    font-weight: 600;
+    font-size: 13px;
+    margin-top: -3px;
+    margin-left: 5px;
+    color: rgba(0, 140, 255, 0.637);
+    text-shadow: 
+  0 0 1px rgba(0, 0, 0, 0.03),
+  0 0 2px rgba(0, 0, 0, 0.03),
+  0 0 3px rgba(0, 0, 0, 0.03),
+  0 0 4px rgba(0, 0, 0, 0.03),
+  0 0 5px rgba(0, 0, 0, 0.03),
+  0 0 6px rgba(0, 0, 0, 0.03),
+  0 0 7px rgba(0, 0, 0, 0.03),
+  0 0 8px rgba(0, 0, 0, 0.03),
+  0 0 9px rgba(0, 0, 0, 0.03);
+  }
+
+  .social-globe {
+    color: rgba(251, 255, 0, 0.521);
+    font-size: 15px;
+    margin-left: 50px;
+    text-shadow: 
+  0 0 1px rgba(0, 0, 0, 0.1),
+  0 0 2px rgba(0, 0, 0, 0.1),
+  0 0 3px rgba(0, 0, 0, 0.1),
+  0 0 4px rgba(0, 0, 0, 0.1),
+  0 0 5px rgba(0, 0, 0, 0.1),
+  0 0 6px rgba(0, 0, 0, 0.1),
+  0 0 7px rgba(0, 0, 0, 0.1),
+  0 0 8px rgba(0, 0, 0, 0.1),
+  0 0 9px rgba(0, 0, 0, 0.1),
+  }
+
+  .social-social {
+    color: rgba(0, 255, 21, 0.521);
+    font-size: 15px;
+    margin-left: 25px;
+    text-shadow: 
+  0 0 1px rgba(0, 0, 0, 0.1),
+  0 0 2px rgba(0, 0, 0, 0.1),
+  0 0 3px rgba(0, 0, 0, 0.1),
+  0 0 4px rgba(0, 0, 0, 0.1),
+  0 0 5px rgba(0, 0, 0, 0.1),
+  0 0 6px rgba(0, 0, 0, 0.1),
+  0 0 7px rgba(0, 0, 0, 0.1),
+  0 0 8px rgba(0, 0, 0, 0.1),
+  0 0 9px rgba(0, 0, 0, 0.1),
+  }
+
+  .social-info {
+    color: rgba(0, 138, 202, 0.603);
+    font-size: 15px;
+    margin-left: 25px;
+    text-shadow: 
+  0 0 1px rgba(0, 0, 0, 0.05),
+  0 0 2px rgba(0, 0, 0, 0.05),
+  0 0 3px rgba(0, 0, 0, 0.05),
+  0 0 4px rgba(0, 0, 0, 0.05),
+  0 0 5px rgba(0, 0, 0, 0.05),
+  0 0 6px rgba(0, 0, 0, 0.05),
+  0 0 7px rgba(0, 0, 0, 0.05),
+  0 0 8px rgba(0, 0, 0, 0.05),
+  0 0 9px rgba(0, 0, 0, 0.05),
+  }
+
   .tile-number {
     width: 50px;
     padding-left: 16px;
