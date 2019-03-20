@@ -71,9 +71,10 @@ class App extends Component {
             <div className="col-lg-12 text-center page-title">
               <h2 className="mt-5">
                 {`Found ${this.state.projectList.length} Ecosystem Projects :)`}
-                <br/>
-                <br/>
               </h2>
+              <h6 className="page-sub-title">
+                Add <a href="https://github.com/CosmosProjectsList/ProjectsRegistry/blob/master/README.md" target="_blank" rel="noopener noreferrer">new submission</a> to the list or <a href="https://forum.cosmos.network/t/funding-your-cosmos-tendermint-startup/809" target="_blank" rel="noopener noreferrer">get funding</a> for your project.
+              </h6>
             </div>
             
           </div>
